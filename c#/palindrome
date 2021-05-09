@@ -1,0 +1,28 @@
+using System;
+
+namespace HelloWorld {
+  class Program {
+   public static void Palindrome(int n) {
+     int temp = n;
+     int res = 0;
+     while(n>0)
+     {
+       res = n%10 + res*10;
+       n = n/10;
+     }
+     if(temp == res)
+     {
+       Console.WriteLine("the number is Palindrome");
+     }
+     else
+     {
+       Console.WriteLine("the number is not Palindrome");
+     }
+   }
+   public static void Main(String[] args){
+    Console.Write("Enter the number of numbers: ");
+    int x = Convert.ToInt32(Console.ReadLine());
+    Palindrome(x);
+   }
+  }
+} 

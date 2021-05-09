@@ -1,0 +1,24 @@
+using System;
+
+namespace HelloWorld {
+  class Program {
+   public static void Fibonacci(int n) {
+     int t1 = 0, t2 = 1;
+     Console.WriteLine(t1);
+     Console.WriteLine(t2);
+     int nextTerm = t1 + t2;
+
+    while(nextTerm <= n) {
+        Console.WriteLine(nextTerm);
+        t1 = t2;
+        t2 = nextTerm;
+        nextTerm = t1 + t2;
+    }
+   }
+   public static void Main(String[] args){
+    Console.Write("Enter the number of numbers: ");
+    int x = Convert.ToInt32(Console.ReadLine());
+    Fibonacci(x);
+   }
+  }
+} 

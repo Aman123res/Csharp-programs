@@ -1,0 +1,28 @@
+using System;
+
+namespace HelloWorld {
+  class Program {
+   public static void Armstrong(int n) {
+     int temp = n;
+     int res = 0;
+     while(temp > 0)
+     {
+       res +=  Convert.ToInt32(Math.Pow((temp%10), 3));
+       temp = temp/10;
+     }
+     if(n == res)
+     {
+       Console.WriteLine("Armstrong");
+     }
+     else
+      {
+        Console.WriteLine("Not A Armstrong");
+      }
+   }
+   public static void Main(String[] args){
+    Console.Write("Enter the number of numbers: ");
+    int x = Convert.ToInt32(Console.ReadLine());
+    Armstrong(x);
+   }
+  }
+} 

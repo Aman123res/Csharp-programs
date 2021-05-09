@@ -1,0 +1,17 @@
+using System;
+
+namespace HelloWorld {
+  class Program {
+   public static int factorial(int n) {
+     if(n==0){
+       return 1;
+     }
+     return factorial(n-1)*n;
+   }
+   public static void Main(String[] args){
+    Console.Write("Enter the number of numbers: ");
+    int x = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine(factorial(x));
+   }
+  }
+}       
